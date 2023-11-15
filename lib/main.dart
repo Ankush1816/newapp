@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/ProductDetails.dart';
 
 void main() {
   runApp(EcommerceApp());
@@ -8,7 +9,7 @@ class EcommerceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ProductPage(),
+
     );
   }
 }
