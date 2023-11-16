@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newapp/ProductDetails.dart';
+import 'package:newapp/review_screen.dart';
 
 void main() {
   runApp(EcommerceApp());

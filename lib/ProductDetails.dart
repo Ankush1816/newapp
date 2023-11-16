@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/review_screen.dart';
+
 class ProductDetails extends StatefulWidget {
   const ProductDetails({Key? key}) : super(key: key);
 
@@ -9,6 +11,8 @@ class ProductDetails extends StatefulWidget {
 class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+    
+    );
   }
 }
