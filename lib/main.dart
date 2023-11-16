@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newapp/ProductDetails.dart';
+import 'package:newapp/review_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ProductDetails(),
+      home: ReviewScreen(),
     );
   }
 }
