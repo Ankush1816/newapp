@@ -20,9 +20,9 @@ class _ReviewScreenState extends State<ReviewScreen> {
           style: TextStyle(fontSize: 25, color: Colors.black),
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -50,7 +50,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   Expanded(
                     flex: 7,
                     child: Column(
-                      children: const [
+                      children: [
                         RatingProgressIndicator(
                           text: '* * * * *',
                           value: 1.0,
@@ -99,7 +99,7 @@ class RatingProgressIndicator extends StatelessWidget {
       children: [
         Expanded(
           flex: 2,
-          child: Text(text, style: TextStyle(fontSize: 22)),
+          child: Text(text, style: const TextStyle(fontSize: 22)),
         ),
         Expanded(
           flex: 3,
@@ -108,8 +108,8 @@ class RatingProgressIndicator extends StatelessWidget {
             child: LinearProgressIndicator(
               value: value,
               minHeight: 11,
-              backgroundColor: Color(0xFFF1E6DD),
-              valueColor: AlwaysStoppedAnimation(Colors.grey),
+              backgroundColor: const Color(0xFFF1E6DD),
+              valueColor: const AlwaysStoppedAnimation(Colors.grey),
             ),
           ),
         )

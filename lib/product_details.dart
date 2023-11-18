@@ -11,8 +11,6 @@ class ProductDetails extends StatefulWidget {
 class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-    
-    );
+    return const Scaffold();
   }
 }

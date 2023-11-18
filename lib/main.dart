@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:newapp/review_screen.dart';
 
 void main() {
-  runApp(EcommerceApp());
+  runApp(const EcommerceApp());
 }
 
 class EcommerceApp extends StatelessWidget {
+  const EcommerceApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-
-    );
+    return const MaterialApp();
   }
 }
 
@@ -34,11 +34,13 @@ class ProductPage extends StatelessWidget {
         'https://th.bing.com/th?id=OIP.cPPnE_YrpZuGhDPzRoU9zgHaLG&w=204&h=306&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2'),
   ];
 
+  ProductPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('E-commerce App'),
+        title: const Text('E-commerce App'),
       ),
       body: ListView.builder(
         itemCount: products.length,
@@ -66,7 +68,7 @@ class ProductPage extends StatelessWidget {
 class ProductDetailsPage extends StatefulWidget {
   final Product product;
 
-  ProductDetailsPage(this.product);
+  const ProductDetailsPage(this.product, {super.key});
 
   @override
   _ProductDetailsPageState createState() => _ProductDetailsPageState();
@@ -83,7 +85,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 1),
+      duration: const Duration(seconds: 1),
     );
     _animation = Tween(begin: 0.0, end: 1.0).animate(_controller);
     _controller.forward();
@@ -105,35 +107,35 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
         children: [
           SlideTransition(
             position: Tween<Offset>(
-              begin: Offset(-1.0, 0.0),
+              begin: const Offset(-1.0, 0.0),
               end: Offset.zero,
             ).animate(_controller),
             child: Image.network(widget.product.imageUrl),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           FadeTransition(
             opacity: _animation,
             child: Column(
               children: [
                 Text(
                   widget.product.name,
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   widget.product.description,
-                  style: TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 16),
                 ),
                 Text(
                   '\$${widget.product.price.toStringAsFixed(2)}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           TextField(
             controller: commentController,
-            decoration: InputDecoration(labelText: 'Add a comment'),
+            decoration: const InputDecoration(labelText: 'Add a comment'),
           ),
           ElevatedButton(
             onPressed: () {
@@ -142,9 +144,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
                 commentController.clear();
               });
             },
-            child: Text('Post Comment'),
+            child: const Text('Post Comment'),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Expanded(
             child: FadeTransition(
               opacity: _animation,
