@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import '../components/default_button.dart';
+import '../../../components/default_button.dart';
 import 'package:newapp/constants.dart';
 import '../components/splash_content.dart';
 
