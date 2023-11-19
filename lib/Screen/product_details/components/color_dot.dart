@@ -1,7 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:newapp/components/rounded_icon_btn.dart';
+import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';
-import '../../../constants.dart';
 
 class ColorDots extends StatelessWidget {
   const ColorDots({super.key, 
@@ -26,7 +28,7 @@ class ColorDots extends StatelessWidget {
               isSelected: index == selectedColor,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           RoundedIconBtn(
             icon: Icons.remove,
             press: () {},
@@ -44,11 +46,10 @@ class ColorDots extends StatelessWidget {
 }
 
 class ColorDot extends StatelessWidget {
-  const ColorDot({
-    Key? key,
+  const ColorDot({super.key, 
     required this.color,
     this.isSelected = false,
-  }) : super(key: key);
+  });
 
   final Color color;
   final bool isSelected;

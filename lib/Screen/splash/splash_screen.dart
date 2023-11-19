@@ -5,7 +5,7 @@ import 'package:newapp/Screen/splash/components/body.dart';
 import 'package:newapp/constants.dart';
 
 class SplashScreen extends StatelessWidget {
-  static String routeName = "/splash";
+  static String routeName = "/";
 
   @override
   Widget build(BuildContext context) {

@@ -1,18 +1,14 @@
-// ignore_for_file: empty_constructor_bodies
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../../../constants.dart';
+import 'package:newapp/constants.dart';
 
 class CustomAppBar extends PreferredSize {
   final double rating;
 
-  CustomAppBar({
-    Key? key,
-    required Size preferredSize,
-    required this.rating,
-    required Widget child,
-  }) : super(key: key, preferredSize: preferredSize, child: child);
+  const CustomAppBar({super.key, required this.rating, required super.preferredSize, required super.child});
+
+  @override
+  // AppBar().preferredSize.height provide us the height that appy on our app bar
+  Size get preferredSize => Size.fromHeight(AppBar().preferredSize.height);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +22,12 @@ class CustomAppBar extends PreferredSize {
               height: getProportionateScreenWidth(40),
               width: getProportionateScreenWidth(40),
               child: IconButton(
+                color: Colors.white,
                 padding: EdgeInsets.zero,
                 onPressed: () => Navigator.pop(context),
-                icon: SvgPicture.asset(
+                icon: Image.asset(
                   "assets/icons/Back ICon.svg",
+                  height: 15,
                 ),
               ),
             ),
@@ -50,7 +48,7 @@ class CustomAppBar extends PreferredSize {
                     ),
                   ),
                   const SizedBox(width: 5),
-                  SvgPicture.asset("assets/icons/Star Icon.svg"),
+                  Image.asset("assets/icons/Star Icon.svg"),
                 ],
               ),
             )
@@ -59,9 +57,4 @@ class CustomAppBar extends PreferredSize {
       ),
     );
   }
-}
-
-@override
-Size get preferredSize {
-  return Size.fromHeight(AppBar().preferredSize.height);
 }

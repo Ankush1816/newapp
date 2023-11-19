@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+
+import 'package:newapp/Screen/product_details/pro_det_screen.dart';
 import 'package:newapp/Screen/splash/splash_screen.dart';
 
-final Map<String, WidgetBuilder> routs = {
-  SplashScreen.routeName: (context) => SplashScreen(),
+final routs = {
+  '/': (context) => SplashScreen(),
+  ProductScreen.routeName: (context) => ProductScreen(),
 };

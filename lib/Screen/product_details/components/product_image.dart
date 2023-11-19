@@ -1,9 +1,6 @@
-// ignore_for_file: library_private_types_in_public_api
-
 import 'package:flutter/material.dart';
+import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';
-import '../../../constants.dart';
-
 class ProductImages extends StatefulWidget {
   const ProductImages({super.key, 
     required this.product,
@@ -12,6 +9,7 @@ class ProductImages extends StatefulWidget {
   final Product product;
 
   @override
+  // ignore: library_private_types_in_public_api
   _ProductImagesState createState() => _ProductImagesState();
 }
 
@@ -51,7 +49,7 @@ class _ProductImagesState extends State<ProductImages> {
         });
       },
       child: AnimatedContainer(
-        duration: kAnimationDuration,
+        duration: defaultDuration,
         margin: const EdgeInsets.only(right: 15),
         padding: const EdgeInsets.all(8),
         height: getProportionateScreenWidth(48),

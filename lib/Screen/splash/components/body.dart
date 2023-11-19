@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
+import 'package:newapp/Screen/product_details/pro_det_screen.dart';
 import '../../../components/default_button.dart';
 import 'package:newapp/constants.dart';
 import '../components/splash_content.dart';
@@ -54,7 +54,7 @@ class _BodyState extends State<Body> {
                   horizontal: getProportionateScreenWidth(25)),
               child: Column(
                 children: [
-                  const SizedBox(height: 20),
+                  // const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: List.generate(
@@ -62,8 +62,11 @@ class _BodyState extends State<Body> {
                       (index) => BuildDot(index),
                     ),
                   ),
-                  const SizedBox(height: 120),
-                  DefaultButton(text: "Continue", press: () {}),
+                  // const SizedBox(height: 120),
+                  DefaultButton(
+                    text: "Continue ",
+                    press: () =>  Navigator.pushNamed(context, ProductScreen.routeName)
+                  ),
                 ],
               ),
             ),
