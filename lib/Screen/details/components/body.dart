@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:newapp/components/default_button.dart';
 import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';
-
 import 'color_dots.dart';
 import 'product_description.dart';
 import 'top_rounded_container.dart';
@@ -11,7 +10,7 @@ import 'product_images.dart';
 class Body extends StatelessWidget {
   final Product product;
 
-  const Body({required this.product});
+  const Body({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class Body extends StatelessWidget {
                 pressOnSeeMore: () {},
               ),
               TopRoundedContainer(
-                color: Color(0xFFF6F7F9),
+                color: const Color(0xFFF6F7F9),
                 child: Column(
                   children: [
                     ColorDots(product: product),
@@ -54,6 +53,5 @@ class Body extends StatelessWidget {
         ),
       ],
     );
-  
   }
 }

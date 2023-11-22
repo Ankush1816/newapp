@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-// import 'package:newapp/components/product_card.dart';
-// import 'package:newapp/models/Product.dart';
+import 'package:newapp/components/product_card.dart';
+import 'package:newapp/model/Product.dart';
 import 'package:newapp/constants.dart';
 
 import 'section_title.dart';
 
 class PopularProducts extends StatelessWidget {
+  const PopularProducts({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,17 +22,18 @@ class PopularProducts extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              //   ...List.generate(
-              //     demoProducts.length,
-              //     (index) {
-              //       if (demoProducts[index].isPopular)
-              //         return ProductCard(product: demoProducts[index]);
+              ...List.generate(
+                demoProducts.length,
+                (index) {
+                  if (demoProducts[index].isPopular) {
+                    return ProductCard(product: demoProducts[index]);
+                  }
 
-              //       return SizedBox
-              //           .shrink(); // here by default width and height is 0
-              //     },
-              //   ),
-              //   SizedBox(width: getProportionateScreenWidth(20)),
+                  return const SizedBox
+                      .shrink(); // here by default width and height is 0
+                },
+              ),
+              SizedBox(width: getProportionateScreenWidth(20)),
             ],
           ),
         )

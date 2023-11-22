@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:newapp/constants.dart';
-
 
 class Categories extends StatelessWidget {
   @override
@@ -32,7 +32,7 @@ class Categories extends StatelessWidget {
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
-    Key?key,
+    Key? key,
     required this.icon,
     required this.text,
     required this.press,
@@ -54,13 +54,17 @@ class CategoryCard extends StatelessWidget {
               height: getProportionateScreenWidth(55),
               width: getProportionateScreenWidth(55),
               decoration: BoxDecoration(
-                color: Color(0xFFFFECDF),
+                color: const Color(0xFFFFECDF),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Image.asset(icon),
+              child: SvgPicture.asset(icon),
             ),
-            SizedBox(height: 5),
-            Text(text, textAlign: TextAlign.center)
+            const SizedBox(height: 5),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: Colors.black),
+            )
           ],
         ),
       ),

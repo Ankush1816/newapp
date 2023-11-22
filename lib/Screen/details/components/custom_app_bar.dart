@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:newapp/constants.dart';
 
 class CustomAppBar extends PreferredSize {
   final double rating;
 
-  CustomAppBar({required this.rating, required super.preferredSize, required super.child});
+  const CustomAppBar({super.key, required this.rating, required super.preferredSize, required super.child});
 
   @override
   // AppBar().preferredSize.height provide us the height that appy on our app bar
@@ -25,13 +26,13 @@ class CustomAppBar extends PreferredSize {
                 color: Colors.white,
                 padding: EdgeInsets.zero,
                 onPressed: () => Navigator.pop(context),
-                icon: Image.asset(
+                icon: SvgPicture.asset(
                   "assets/icons/Back ICon.svg",
                   height: 15,
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
               decoration: BoxDecoration(
@@ -45,10 +46,11 @@ class CustomAppBar extends PreferredSize {
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(width: 5),
-                  Image.asset("assets/icons/Star Icon.svg"),
+                  SvgPicture.asset("assets/icons/Star Icon.svg"),
                 ],
               ),
             )

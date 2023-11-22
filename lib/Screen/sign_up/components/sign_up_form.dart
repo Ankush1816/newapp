@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:newapp/components/coustom_svg.dart';
 import 'package:newapp/components/default_button.dart';
 import 'package:newapp/components/form_error.dart';
-import '../../../../Screen/complete_profile/complete_profile_screen.dart';
+import '../../complete_profile/complete_profile_screen.dart';
 // import 'package:newapp/screens/login_success/login_success_screen.dart';
 
-import '../../../../constants.dart';
+import '../../../constants.dart';
 
 class SignUpForm extends StatefulWidget {
   @override
