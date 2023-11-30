@@ -28,7 +28,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
             children: [
               // Text(
               //     "rating and reviews are verified and are from people who use the same"),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
 
@@ -38,7 +38,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   Expanded(
                     flex: 3,
                     child: Column(
-                      children: [
+                      children: const [
                         Text('4.5', style: TextStyle(fontSize: 60)),
                         Text('23 Ratings'),
                       ],
