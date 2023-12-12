@@ -5,8 +5,6 @@ import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';
 
 class ProductScreen extends StatelessWidget {
-  static String routeName = "/product";
-
   const ProductScreen({Key? key}) : super(key: key);
 
   @override
