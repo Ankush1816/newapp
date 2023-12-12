@@ -7,6 +7,8 @@ import 'package:newapp/model/Product.dart';
 class ProductScreen extends StatelessWidget {
   static String routeName = "/product";
 
+  const ProductScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     

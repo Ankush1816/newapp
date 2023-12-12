@@ -8,23 +8,34 @@ class DefaultButton extends StatelessWidget {
     required this.press,
   });
   final String text;
-  final Function press;
+  final void Function() press;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenHeight(56),
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: kPrimaryColor,
+      child: GestureDetector(
+        onTap: press,
+        // onTap: () {
+        //   Navigator.of(context, rootNavigator: true)
+        //       .pushNamed(ProductScreen.routeName);
+        // },
+        child: Container(
+          decoration: BoxDecoration(
+            color: kPrimaryColor,
+            borderRadius: BorderRadius.circular(8.0),
+          ),
           padding: const EdgeInsets.all(16.0),
-        ),
-        onPressed: press(),
-        child: Text(
-          text,
-          style: TextStyle(
-              fontSize: getProportionateScreenWidth(18), color: Colors.white),
+          child: Center(
+            child: Text(
+              text,
+              style: TextStyle(
+                fontSize: getProportionateScreenWidth(18),
+                color: Colors.white,
+              ),
+            ),
+          ),
         ),
       ),
     );

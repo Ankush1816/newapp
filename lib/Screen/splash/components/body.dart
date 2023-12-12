@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 import 'package:flutter/material.dart';
-import 'package:newapp/Screen/product_details/pro_det_screen.dart';
+// import 'package:newapp/Screen/product_details/pro_det_screen.dart';
+import 'package:newapp/Screen/sign_in/sign_in_page.dart';
 import '../../../components/default_button.dart';
 import 'package:newapp/constants.dart';
 import '../components/splash_content.dart';
@@ -62,11 +63,14 @@ class _BodyState extends State<Body> {
                       (index) => BuildDot(index),
                     ),
                   ),
-                  // const SizedBox(height: 120),
+                  const SizedBox(height: 120),
                   DefaultButton(
-                    text: "Continue ",
-                    press: () =>  Navigator.pushNamed(context, ProductScreen.routeName)
-                  ),
+                      text: "Continue ",
+                      press: () {
+                        // print("Data");
+                        Navigator.of(context, rootNavigator: true)
+                            .pushNamed(SignInScreen.routeName);
+                      })
                 ],
               ),
             ),
