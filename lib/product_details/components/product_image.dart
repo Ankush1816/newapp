@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';
 
-import '../../../constants.dart';
-
 class ProductImages extends StatefulWidget {
-  const ProductImages({super.key, 
+  const ProductImages({
+    super.key,
     required this.product,
   });
 
@@ -19,27 +19,36 @@ class _ProductImagesState extends State<ProductImages> {
   int selectedImage = 0;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          width: getProportionateScreenWidth(238),
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: Hero(
-              tag: widget.product.id.toString(),
-              child: Image.asset(widget.product.images[selectedImage]),
+    return Container(
+      width: 350,
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.all(
+           Radius.circular(50),
+        ),
+      ),
+      child: Column(
+        children: [
+          SizedBox(
+            width: getProportionateScreenWidth(238),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Hero(
+                tag: widget.product.id.toString(),
+                child: Image.network(widget.product.images[selectedImage]),
+              ),
             ),
           ),
-        ),
-        // SizedBox(height: getProportionateScreenWidth(20)),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ...List.generate(widget.product.images.length,
-                (index) => buildSmallProductPreview(index)),
-          ],
-        )
-      ],
+          // SizedBox(height: getProportionateScreenWidth(20)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ...List.generate(widget.product.images.length,
+                  (index) => buildSmallProductPreview(index)),
+            ],
+          )
+        ],
+      ),
     );
   }
 
@@ -62,7 +71,7 @@ class _ProductImagesState extends State<ProductImages> {
           border: Border.all(
               color: kPrimaryColor.withOpacity(selectedImage == index ? 1 : 0)),
         ),
-        child: Image.asset(widget.product.images[index]),
+        child: Image.network(widget.product.images[index]),
       ),
     );
   }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:newapp/Screen/product_details/components/color_dot.dart';
-import 'package:newapp/Screen/product_details/components/product_dis.dart';
-import 'package:newapp/Screen/product_details/components/product_image.dart';
-import 'package:newapp/Screen/product_details/components/top_rounded_container.dart';
+import 'package:newapp/product_details/components/color_dot.dart';
+import 'package:newapp/product_details/components/product_dis.dart';
+import 'package:newapp/product_details/components/product_image.dart';
+import 'package:newapp/product_details/components/top_rounded_container.dart';
 import 'package:newapp/components/default_button.dart';
 import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';

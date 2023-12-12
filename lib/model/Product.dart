@@ -29,10 +29,10 @@ List<Product> demoProducts = [
   Product(
     id: 1,
     images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "https://th.bing.com/th/id/R.38f73d6abc37358a21fdddc9dd43b758?rik=x%2fNY%2bQDik3%2b4tg&riu=http%3a%2f%2fwww.powerhouse.je%2fimages%2fsony-playstation-4-solus-gaming-console-white-p6922-7215_image.jpg&ehk=oN1M0D3pAbmtZ6EGZ7euRBgf%2bB2XcFtJqP4US2u%2fQpw%3d&risl=&pid=ImgRaw&r=0",
+      "https://www.slashgear.com/wp-content/uploads/2014/09/white07.png",
+      "https://th.bing.com/th/id/OIP.h7LSrmWHzpyVDUhqNEAGXQHaHa?rs=1&pid=ImgDetMain",
+      "https://th.bing.com/th/id/R.8d9b5a4d2dbcdb714311ad32a3fafc16?rik=7rG2r9G%2fgBOSPA&riu=http%3a%2f%2fwww.powerhouse.je%2fimages%2fsony-playstation-4-solus-gaming-console-white-p6922-7213_image.jpg&ehk=FF2CIreVoA4rT0UTFyudRZg%2fyjSs3uWoWFAQiP48vOI%3d&risl=&pid=ImgRaw&r=0",
     ],
     colors: [
       const Color(0xFFF6625E),
