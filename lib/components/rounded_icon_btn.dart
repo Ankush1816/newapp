@@ -32,7 +32,7 @@ class RoundedIconBtn extends StatelessWidget {
       ),
       child: IconButton(
         padding: EdgeInsets.zero,
-        color: Colors.white,
+        color: Colors.black38,
         onPressed: press,
         icon: Icon(icon),
       ),

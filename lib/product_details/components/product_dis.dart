@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:newapp/constants.dart';
 import 'package:newapp/model/Product.dart';
-
-import '../../../constants.dart';
 
 class ProductDescription extends StatelessWidget {
   const ProductDescription({super.key, 
@@ -39,8 +37,8 @@ class ProductDescription extends StatelessWidget {
                 bottomLeft: Radius.circular(20),
               ),
             ),
-            child: SvgPicture.asset(
-              "assets/icons/Heart Icon_2.svg",
+            child: Image.network(
+              "https://cdn-icons-png.flaticon.com/128/833/833472.png",
               color:
                   product.isFavourite ? const Color(0xFFFF4848) : const Color(0xFFDBDEE4),
               height: getProportionateScreenWidth(16),
@@ -55,7 +53,6 @@ class ProductDescription extends StatelessWidget {
           child: Text(
             product.description,
             maxLines: 3,
-            style: const TextStyle(color: Colors.black),
           ),
         ),
         Padding(
